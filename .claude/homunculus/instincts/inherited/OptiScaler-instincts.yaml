@@ -1,0 +1,551 @@
+# Instincts generated from https://github.com/anilmetin0/OptiScaler
+# Generated: 2026-04-02T09:26:50.928Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: OptiScaler-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/anilmetin0/OptiScaler
+---
+
+# OptiScaler Commit Length
+
+## Action
+
+Keep commit messages concise (~39 characters)
+
+## Evidence
+
+- Average commit message length: 39 chars
+- Based on 200 commits
+
+---
+id: OptiScaler-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/anilmetin0/OptiScaler
+---
+
+# OptiScaler Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: OptiScaler-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/anilmetin0/OptiScaler
+---
+
+# OptiScaler Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: OptiScaler-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/anilmetin0/OptiScaler
+---
+
+# OptiScaler Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: OptiScaler-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/anilmetin0/OptiScaler
+---
+
+# OptiScaler Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: OptiScaler-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/anilmetin0/OptiScaler
+---
+
+# OptiScaler Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: 
+
+---
+id: OptiScaler-workflow-update-readme-or-documentation
+trigger: "when doing update readme or documentation"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/anilmetin0/OptiScaler
+---
+
+# OptiScaler Workflow Update Readme Or Documentation
+
+## Action
+
+Follow the update-readme-or-documentation workflow:
+1. Edit README.md to add or update content
+2. Commit the changes with a message referencing the update
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: README.md
+
+---
+id: OptiScaler-workflow-add-or-update-quirk
+trigger: "when doing add or update quirk"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/anilmetin0/OptiScaler
+---
+
+# OptiScaler Workflow Add Or Update Quirk
+
+## Action
+
+Follow the add-or-update-quirk workflow:
+1. Edit OptiScaler/misc/Quirks.h to add or modify a quirk
+2. Optionally update related files (dllmain.cpp, DLSSG_Mod.h, etc.) if the quirk requires integration
+3. Commit with a message referencing the quirk or game
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: OptiScaler/misc/Quirks.h, OptiScaler/dllmain.cpp, OptiScaler/inputs/FG/DLSSG_Mod.h
+
+---
+id: OptiScaler-workflow-menu-or-ui-feature-tweak
+trigger: "when doing menu or ui feature tweak"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/anilmetin0/OptiScaler
+---
+
+# OptiScaler Workflow Menu Or Ui Feature Tweak
+
+## Action
+
+Follow the menu-or-ui-feature-tweak workflow:
+1. Edit OptiScaler/menu/menu_common.cpp to implement the change
+2. Commit with a message describing the menu/UI update
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: OptiScaler/menu/menu_common.cpp
+
+---
+id: OptiScaler-workflow-add-or-update-framegen-feature
+trigger: "when doing add or update framegen feature"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/anilmetin0/OptiScaler
+---
+
+# OptiScaler Workflow Add Or Update Framegen Feature
+
+## Action
+
+Follow the add-or-update-framegen-feature workflow:
+1. Edit or add files under OptiScaler/framegen/<backend>/ (e.g., DLSSG_Dx12.cpp, FSRFG_Dx12.cpp, XeFG_Dx12.cpp)
+2. Optionally update related hooks or input files
+3. Commit with a message referencing the FG feature
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: OptiScaler/framegen/dlssg/DLSSG_Dx12.cpp, OptiScaler/framegen/ffx/FSRFG_Dx12.cpp, OptiScaler/framegen/xefg/XeFG_Dx12.cpp
+
+---
+id: OptiScaler-workflow-fix-or-improve-fg-swapchain-release
+trigger: "when doing fix or improve fg swapchain release"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/anilmetin0/OptiScaler
+---
+
+# OptiScaler Workflow Fix Or Improve Fg Swapchain Release
+
+## Action
+
+Follow the fix-or-improve-fg-swapchain-release workflow:
+1. Edit OptiScaler/hooks/FG_Hooks.cpp and/or related FG input files
+2. Commit with a message referencing swapchain release improvements
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: OptiScaler/hooks/FG_Hooks.cpp, OptiScaler/inputs/FG/FSR3_Dx12_FG.cpp, OptiScaler/inputs/FG/FfxApi_Dx12_FG.cpp
+
+---
+id: OptiScaler-workflow-multi-file-feature-integration
+trigger: "when doing multi file feature integration"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/anilmetin0/OptiScaler
+---
+
+# OptiScaler Workflow Multi File Feature Integration
+
+## Action
+
+Follow the multi-file-feature-integration workflow:
+1. Edit or add multiple files across hooks, inputs, menu, upscalers, and config
+2. Update project files if new files are added
+3. Commit with a message referencing the feature or refactor
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: OptiScaler/Config.cpp, OptiScaler/State.h, OptiScaler/menu/menu_common.cpp
+
+---
+id: optiscaler-instinct-file-naming
+trigger: "When creating or renaming a source file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: anilmetin0/OptiScaler
+---
+
+# Optiscaler Instinct File Naming
+
+## Action
+
+Use snake_case for file names
+
+## Evidence
+
+- Pattern in naming conventions
+- Observed in OptiScaler/menu/menu_common.cpp
+
+---
+id: optiscaler-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: anilmetin0/OptiScaler
+---
+
+# Optiscaler Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in naming conventions
+- Seen in OptiScaler/menu/menu_common.cpp
+
+---
+id: optiscaler-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: anilmetin0/OptiScaler
+---
+
+# Optiscaler Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in naming conventions
+- Seen in OptiScaler/State.h
+
+---
+id: optiscaler-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: anilmetin0/OptiScaler
+---
+
+# Optiscaler Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constants
+
+## Evidence
+
+- Pattern in naming conventions
+- Seen in OptiScaler/Config.cpp
+
+---
+id: optiscaler-instinct-import-style
+trigger: "When importing modules within the package"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: anilmetin0/OptiScaler
+---
+
+# Optiscaler Instinct Import Style
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in importStyle
+- Seen in OptiScaler/menu/menu_common.cpp
+
+---
+id: optiscaler-instinct-export-style
+trigger: "When exporting symbols or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: anilmetin0/OptiScaler
+---
+
+# Optiscaler Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle
+- Seen in OptiScaler/inputs/FG/DLSSG_Mod.h
+
+---
+id: optiscaler-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: anilmetin0/OptiScaler
+---
+
+# Optiscaler Instinct Test Location
+
+## Action
+
+Place test files in a separate test directory
+
+## Evidence
+
+- Pattern in architecture.testLocation
+- Test location is separate
+
+---
+id: optiscaler-instinct-commit-format-freeform
+trigger: "When writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: anilmetin0/OptiScaler
+---
+
+# Optiscaler Instinct Commit Format Freeform
+
+## Action
+
+Use a concise, freeform message describing the change (average 39 characters); optionally prefix with WIP, HACK, or Try for context
+
+## Evidence
+
+- Pattern in commits
+- Examples: 'WIP: Formatting of fakenvapi', 'Try to skip swapchain resize when possible'
+
+---
+id: optiscaler-instinct-update-readme-or-docs
+trigger: "When someone wants to update documentation or add new information to the README"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: anilmetin0/OptiScaler
+---
+
+# Optiscaler Instinct Update Readme Or Docs
+
+## Action
+
+Edit README.md to add or update content, then commit with a message referencing the update
+
+## Evidence
+
+- Workflow: update-readme-or-documentation
+- Commits editing README.md
+
+---
+id: optiscaler-instinct-add-or-update-quirk
+trigger: "When a workaround or compatibility fix is needed for a specific game or hardware issue"
+confidence: 0.92
+domain: workflow
+source: repo-analysis
+source_repo: anilmetin0/OptiScaler
+---
+
+# Optiscaler Instinct Add Or Update Quirk
+
+## Action
+
+Edit OptiScaler/misc/Quirks.h to add or modify a quirk; optionally update related files (dllmain.cpp, DLSSG_Mod.h); commit with a message referencing the quirk or game
+
+## Evidence
+
+- Workflow: add-or-update-quirk
+- Commits referencing quirks in OptiScaler/misc/Quirks.h
+
+---
+id: optiscaler-instinct-menu-ui-tweak
+trigger: "When making changes or adding features to the in-game menu or UI system"
+confidence: 0.93
+domain: workflow
+source: repo-analysis
+source_repo: anilmetin0/OptiScaler
+---
+
+# Optiscaler Instinct Menu Ui Tweak
+
+## Action
+
+Edit OptiScaler/menu/menu_common.cpp to implement the change; commit with a message describing the menu/UI update
+
+## Evidence
+
+- Workflow: menu-or-ui-feature-tweak
+- Commits editing menu_common.cpp
+
+---
+id: optiscaler-instinct-add-or-update-fg-feature
+trigger: "When adding or updating frame generation support for a new or existing technology"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: anilmetin0/OptiScaler
+---
+
+# Optiscaler Instinct Add Or Update Fg Feature
+
+## Action
+
+Edit or add files under OptiScaler/framegen/<backend>/; optionally update related hooks or input files; commit with a message referencing the FG feature
+
+## Evidence
+
+- Workflow: add-or-update-framegen-feature
+- Commits editing framegen backend files
+
+---
+id: optiscaler-instinct-fix-fg-swapchain-release
+trigger: "When fixing or optimizing swapchain release logic for FG features"
+confidence: 0.87
+domain: workflow
+source: repo-analysis
+source_repo: anilmetin0/OptiScaler
+---
+
+# Optiscaler Instinct Fix Fg Swapchain Release
+
+## Action
+
+Edit OptiScaler/hooks/FG_Hooks.cpp and/or related FG input files; commit with a message referencing swapchain release improvements
+
+## Evidence
+
+- Workflow: fix-or-improve-fg-swapchain-release
+- Commits editing FG_Hooks.cpp and related files
+
+---
+id: optiscaler-instinct-multi-file-feature-integration
+trigger: "When integrating a major feature or refactor that touches multiple subsystems"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: anilmetin0/OptiScaler
+---
+
+# Optiscaler Instinct Multi File Feature Integration
+
+## Action
+
+Edit or add multiple files across hooks, inputs, menu, upscalers, and config; update project files if new files are added; commit with a message referencing the feature or refactor
+
+## Evidence
+
+- Workflow: multi-file-feature-integration
+- Commits editing broad sets of files
+
